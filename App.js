@@ -1,20 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { AppRegistry, View, Text } from "react-native";
+import { name as appName } from "./app.json";
+
+// Animation
+import Stagger from './screens/Stagger';
+import Colored from './screens/Colored';
+import Questionnaire from './screens/Questionnaire';
+import Grid from './screens/Grid';
+import FloatingActionButton from './screens/FloatingActionButton';
+import KeyboardCode from './screens/KeyboardCode';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <FloatingActionButton />
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+AppRegistry.registerComponent(appName, () => App);
